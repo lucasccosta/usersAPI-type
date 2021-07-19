@@ -19,7 +19,8 @@ export class CreateUsers1624416875815 implements MigrationInterface {
                     },
                     {
                         name:"lastname",
-                        type: "varchar"
+                        type: "varchar",
+                        isNullable: true
                     },
                     {
                         name:"nickname",
@@ -29,7 +30,8 @@ export class CreateUsers1624416875815 implements MigrationInterface {
                     },
                     {
                         name:"address",
-                        type:"varchar"
+                        type:"varchar",
+                        isNullable: true
                     },
                     {
                         name:"bio",
@@ -52,6 +54,7 @@ export class CreateUsers1624416875815 implements MigrationInterface {
     }
 
     public async down(queryRunner: QueryRunner): Promise<void> {
+        await queryRunner.dropTable("Users")
     }
 
 }

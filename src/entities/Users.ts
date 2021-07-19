@@ -10,7 +10,9 @@ class Users {
   @Column()
   name:string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   lastname:string
 
   @Column({
@@ -19,7 +21,9 @@ class Users {
   })
   nickname:string
 
-  @Column()
+  @Column({
+    nullable: true
+  })
   address:string
 
   @Column()

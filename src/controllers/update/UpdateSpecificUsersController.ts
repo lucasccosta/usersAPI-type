@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { UpdateSpecificUsersService } from "../services/UpdateSpecificUsersService";
+import { UpdateSpecificUsersService } from "../../services/UpdateSpecificUsersService";
 
 
 class UpdateSpecificUsersController {
@@ -25,7 +25,7 @@ class UpdateSpecificUsersController {
 
     const updateSpecificUsersService = new UpdateSpecificUsersService()
 
-    const updateInfo = await updateSpecificUsersService.runUpdateInfo({
+    const updateInfo = await updateSpecificUsersService.runUpdateNickname({
       id,
       nickname
     })

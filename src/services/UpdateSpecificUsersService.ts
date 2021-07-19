@@ -3,7 +3,7 @@ import { UsersRepository } from "../repositories/UsersRepository"
 
 interface IUpdateUsers{
   id: string
-  lastname?: string,
+  lastname?: string
   address?: string
   nickname?: string
 }
